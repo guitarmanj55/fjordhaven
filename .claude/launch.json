@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fjordhaven",
+      "runtimeExecutable": "C:/Users/OJacq/AppData/Local/Programs/Python/Python312/python.exe",
+      "runtimeArgs": ["scripts/serve.py", "8140"],
+      "port": 8140
+    }
+  ]
+}

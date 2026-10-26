@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#16222f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fjordhaven">
+  <title>Fjordhaven</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="view" aria-label="Village"></canvas>
+
+  <div id="hud" hidden>
+    <div class="top">
+      <div class="res" id="res"></div>
+      <div class="clock">
+        <div id="date"></div>
+        <div class="sunbar"><i id="sunDot"></i></div>
+        <div id="people"></div>
+      </div>
+      <div class="ctl">
+        <button id="goalsBtn" class="round" aria-label="Goals">★</button>
+        <button id="speedBtn" class="round" aria-label="Speed">▶</button>
+        <button id="menuBtn" class="round" aria-label="Menu">☰</button>
+      </div>
+    </div>
+    <div id="toasts"></div>
+    <div id="goals" class="card" hidden></div>
+    <div id="info" class="card" hidden></div>
+    <div id="place" hidden>
+      <div id="placeMsg"></div>
+      <div class="row">
+        <button id="placeNo" class="big no" aria-label="Cancel">✕</button>
+        <button id="placeRot" class="big" aria-label="Rotate">⟳</button>
+        <button id="placeYes" class="big yes" aria-label="Build">✓</button>
+      </div>
+    </div>
+    <div class="bottom" id="bottom">
+      <div id="buildbar"></div>
+    </div>
+  </div>
+
+  <div id="title" class="screen">
+    <div class="panel">
+      <h1>Fjordhaven</h1>
+      <p class="tag">Settle a Nordic fjord. Let the village grow its own paths.</p>
+      <div id="scenarios"></div>
+      <button id="continueBtn" class="btn" hidden>Continue your village</button>
+      <details>
+        <summary>How to play</summary>
+        <ul>
+          <li><b>Drag</b> to look around, <b>pinch</b> to zoom, <b>twist</b> with two fingers to turn.</li>
+          <li><b>Build</b> from the bar: tap a building, tap the ground to place it, ⟳ to turn it, ✓ to build. Its door must face open ground.</li>
+          <li>Villagers pick their own jobs, build, fetch and eat. <b>Tap</b> a villager or building to see what they are up to.</li>
+          <li>Where villagers walk the grass wears into <b>trails</b>, then roads. Put shops where people already walk.</li>
+          <li>Homes burn a log a day in winter. Stock <b>food and firewood</b> in summer and autumn.</li>
+          <li>Content villagers with free beds send word, and a longship brings more settlers.</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+
+  <div id="menu" class="screen" hidden>
+    <div class="panel small">
+      <h2>Paused</h2>
+      <button id="resumeBtn" class="btn">Resume</button>
+      <button id="soundBtn" class="btn alt">Sound: on</button>
+      <button id="shadowBtn" class="btn alt">Shadows: on</button>
+      <button id="titleBtn" class="btn alt">Save and leave</button>
+    </div>
+  </div>
+
+  <div id="end" class="screen" hidden>
+    <div class="panel small">
+      <h2 id="endTitle"></h2>
+      <p id="endText"></p>
+      <button id="endKeep" class="btn">Keep playing</button>
+      <button id="endLeave" class="btn alt">Back to title</button>
+    </div>
+  </div>
+
+  <div id="rotate" hidden>Wide screens are best, but portrait works too.</div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

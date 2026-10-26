@@ -1,0 +1,11 @@
+{
+  "name": "fjordhaven",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cozy Nordic fishing-village builder with desire paths, played as a home-screen web app.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "probe": "node scripts/probe.js"
+  }
+}

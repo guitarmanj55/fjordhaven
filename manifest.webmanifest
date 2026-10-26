@@ -1,0 +1,15 @@
+{
+  "name": "Fjordhaven",
+  "short_name": "Fjordhaven",
+  "description": "A cozy Nordic fishing-village builder where the paths make themselves.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#16222f",
+  "theme_color": "#16222f",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
