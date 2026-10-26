@@ -37,6 +37,8 @@ function resize() {
   cam.resize(w, h);
 }
 window.addEventListener('resize', resize);
+window.addEventListener('orientationchange', () => setTimeout(resize, 250));
+if (window.visualViewport) window.visualViewport.addEventListener('resize', resize);
 resize();
 
 // ---- state ----
