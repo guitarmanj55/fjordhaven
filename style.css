@@ -74,3 +74,9 @@ details { text-align: left; margin-top: 8px; color: var(--dim); font-size: 13px;
 @media (max-height: 460px) { .bb .ic { font-size: 18px; } .bb { padding: 3px 6px; min-width: 66px; } .panel { padding: 12px; } h1 { font-size: 30px; } }
 @media (max-width: 380px) { .chip { font-size: 13px; padding: 2px 3px; } .clock { min-width: 100px; } }
 @media (prefers-reduced-motion: reduce) { .toast { animation-duration: 6s; } }
+
+/* Immersive home-screen app: no rubber-band or pull-to-refresh, no double-tap zoom,
+   no grey tap flash, no long-press menu or text selection on controls. */
+html, body { overscroll-behavior: none; }
+html { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+button, a, label, summary, nav, [role="button"], [role="tab"] { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }

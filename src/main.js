@@ -387,4 +387,6 @@ function titleVillage() {
   titleVillage();
   requestAnimationFrame(frame);
   if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});
+  document.addEventListener('gesturestart', (e) => e.preventDefault()); // no pinch-zoom
+  if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {}); // ask iOS not to evict saved data
 })();
