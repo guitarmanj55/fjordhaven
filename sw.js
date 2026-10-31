@@ -1,5 +1,5 @@
 // Network-first so updates show up straight away; the cache keeps it working offline.
-const CACHE = 'fjordhaven-v3';
+const CACHE = 'fjordhaven-v4';
 const SHELL = [
   './', 'index.html', 'style.css', 'manifest.webmanifest', 'vendor/three.module.min.js',
   'src/main.js', 'src/audio.js',
