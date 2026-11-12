@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
-    "probe": "node scripts/probe.js"
+    "probe": "node scripts/probe.js",
+    "check": "node scripts/check.mjs"
   }
 }
